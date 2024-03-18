@@ -29,7 +29,10 @@ module.exports={
             where: {
               id,
             },
-            include: [{ model: User }],
+            include: [{ 
+              model: User,
+              attributes: ['username']
+             }],
           });
           res.status(200).json({
             data,

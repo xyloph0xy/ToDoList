@@ -12,7 +12,7 @@ const {
 
 router.post('/',postTodo)
 router.get('/',verifyToken,getAllTodo)
-router.get('/:id',getTodoById)
+router.get('/:id',verifyToken,getTodoById)
 router.patch('/:id',updateTodo)
 router.delete('/:id',deleteTodo)
 
